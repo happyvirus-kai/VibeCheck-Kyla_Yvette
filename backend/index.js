@@ -46,7 +46,7 @@ app.get("/api/vibe", (req, res) => {
   const vibe = vibeMap[mood];
   if (!vibe) {
     return res.json({
-      mood: mood || "unknown",
+      mood: mood || "dinosaur",
       emoji: "🤔",
       message: "Try mood=happy, tired, or stressed.",
     });
