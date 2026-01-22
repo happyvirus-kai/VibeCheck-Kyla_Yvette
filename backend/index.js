@@ -46,7 +46,7 @@ app.get("/api/vibe", (req, res) => {
   const vibe = vibeMap[mood];
   if (!vibe) {
     return res.json({
-      mood: mood || "unknown",
+      mood: mood || "dinosaur",
       emoji: "🤔",
       message: "Try mood=happy, tired, or stressed.",
     });
@@ -66,7 +66,7 @@ app.get("/api/smashes", (req, res) => {
 app.get("/api/secret", (req, res) => {
   const code = req.query.code;
   if (code === "411L") {
-    return res.json({ message: "🎉 Secret unlocked: +10 luck on your next merge!" });
+    return res.json({ message: "🎉 Secret unlocked: You are a billionaire!" });
   }
   res.status(403).json({ message: "Nope 😄 Try code=411L" });
 });
